@@ -1,0 +1,13 @@
+{
+  "sapIsamEnterpriseGovernance": {
+    "methodologyVersion": "SAP ISA-M 2026+",
+    "approvedIntegrationStyles": [
+      {
+        "style": "Process Integration",
+        "useCasePattern": "Cloud-to-Cloud | B2B Event-Driven Procurement Sync",
+        "mandatorySecurityPolicies": ["TLS-1.3", "OAuth2-Client-Credentials", "Exception-Subprocess-DLQ"],
+        "designTimeRestApi": "/api/v1/IntegrationDesigntimeArtifacts"
+      }
+    ]
+  }
+}

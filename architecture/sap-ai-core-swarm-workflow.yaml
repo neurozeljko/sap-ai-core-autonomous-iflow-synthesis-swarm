@@ -1,0 +1,17 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: ServingTemplate
+metadata:
+  name: autonomous-iflow-synthesis-swarm
+  labels:
+    scenarios.ai.sap.com/id: "sap-isa-m-hyper-automation"
+spec:
+  template:
+    spec:
+      containers:
+        - name: multi-agent-swarm-orchestrator
+          image: ghcr.io/neurozeljko/sap-ai-core-iflow-swarm:1.0.0
+          env:
+            - name: SAP_CPI_DESIGNTIME_API_BASE
+              value: "https://integration-suite-eu10.cfapps.eu10-002.hana.ondemand.com/api/v1"
+            - name: SONARQUBE_QUALITY_GATE_ENFORCED
+              value: "true"

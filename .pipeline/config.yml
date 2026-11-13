@@ -1,0 +1,17 @@
+general:
+  buildTool: 'gradle'
+  verbose: true
+
+stages:
+  Acceptance:
+    cfOrg: 'sap-btp-autonomous-enterprise'
+    cfSpace: 'integration-suite-eu10'
+
+steps:
+  sonarExecuteScan:
+    serverUrl: '[https://sonarqube.enterprise.internal](https://sonarqube.enterprise.internal)'
+    qualityGate: true
+  cpiArtifactDeploy:
+    apiServiceKeyCredentialsId: 'SAP_CPI_DESIGNTIME_OAUTH_KEY'
+    packageId: 'AutonomousSelfHealingEnterprise'
+    deploy: true
