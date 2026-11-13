@@ -174,4 +174,4 @@ X-Swarm-Governance-Status: APPROVED_FOR_ZERO_TOUCH_CICD
 
 ---
 
-**Lead Integration Architect:** Željko Popov
+**Integration Architect:** Željko Popov
